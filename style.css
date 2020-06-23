@@ -1,0 +1,218 @@
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  width: 100%;
+  height: 100vh;
+  font-size: 14px;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2.1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "bg-color" "content-area" "bg-image";
+  background-color: #0d122c;
+  height: 100vh;
+}
+
+.bg-color { grid-area: bg-color; }
+
+.bg-image {
+  grid-area: bg-image;
+  background-image: url('./images/bg-desktop.svg');
+  background-size: cover;
+  margin-top: -80px;
+}
+
+.content-area {
+  display: grid;
+  grid-template-columns: 20em 1fr;
+  grid-template-rows: 5em 3em 1fr;
+  gap: 0px 20px;
+  grid-template-areas: "logo text-gb-area" "icon-area progress-bar" "icon-area text-gb";
+  grid-area: content-area;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.logo {
+  grid-area: logo;
+  border-top-right-radius: 40px;
+  padding: 15px 30px;
+  background-color: #1f2c69;
+  border-top-left-radius: 5px;
+}
+
+.logo img {
+  padding: 10px 0px;
+  margin: 0px 30px;
+}
+
+.icon-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "icon-one icon-two icon-three";
+  grid-area: icon-area;
+  padding: 0px 50px;
+  background-color: #1f2c69;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /* height: 50%; */
+}
+
+.icon-one {
+  grid-area: icon-one;
+  align-self: center;
+  text-align: center;
+  background-color: #0d122c;
+  padding: 9px 0px;
+  margin: 0px 5px;
+  border-radius: 10px;
+}
+
+.icon-two {
+  grid-area: icon-two;
+  align-self: center;
+  text-align: center;
+  background-color: #0d122c;
+  padding: 11px 0px;
+  margin: 0px 5px;
+  border-radius: 10px;
+}
+
+.icon-three {
+  grid-area: icon-three;
+  align-self: center;
+  text-align: center;
+  background-color: #0d122c;
+  padding: 14px 0px;
+  margin: 0px 6px;
+  border-radius: 10px;
+}
+
+.text-gb-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". .";
+  grid-area: text-gb-area;
+  background-color: #1f2c69;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  color: #fff;
+  padding-left: 20px;
+}
+
+.text-gb-area > span {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px 10px;
+  color: #000;
+  position: relative;
+  bottom: 65px;
+  margin: 0px 30px;
+
+}
+
+.text-gb-area > span::after {
+  content: '';
+  position: relative;
+  bottom: 0;
+  top: 5em;
+  left: 9em;
+  border: 31px solid transparent;
+  border-top-color: #ffffff;
+  border-bottom: 0;
+  border-right: 0;
+}
+
+.text-gb-area > span > p > small {
+  color: grey;
+  font-size: 12px;
+  margin: 5px;
+  text-transform: uppercase;
+}
+
+.text-gb-area > span > p {
+  float: right;
+  font-size: 30px;
+  margin: 0px;
+}
+
+.progress-bar {
+  grid-area: progress-bar;
+  background-color: #1f2c69;
+  padding: 0px 20px;
+}
+
+.meter {
+	height: 20px;  /* Can be anything */
+	position: relative;
+	background: #151e49;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	padding: 2px;
+}
+
+.meter > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: rgb(228,203,146);
+  background: -moz-linear-gradient(90deg, rgba(228,203,146,1) 0%, rgba(170,83,141,1) 47%, rgba(236,59,100,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(228,203,146,1) 0%, rgba(170,83,141,1) 47%, rgba(236,59,100,1) 100%);
+  background: linear-gradient(90deg, rgba(228,203,146,1) 0%, rgba(170,83,141,1) 47%, rgba(236,59,100,1) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.meter > span::after {
+  content: '';
+  position: relative;
+  top: 2px;
+  left: 18.5em;
+  border: 9px solid #fff;
+  border-bottom: 0;
+  border-top: 0;
+  background: #fff;
+  border-radius: 50%;
+}
+
+
+.text-gb {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". .";
+  grid-area: text-gb;
+  background-color: #1f2c69;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0px 20px;
+  color: #fff;
+  height: 35px;
+}
+
+.text-gb > p {
+  margin: 0px 0px;
+}
+
+.text-gb > span > p {
+  float: right;
+  margin: 0px 0px;
+}
